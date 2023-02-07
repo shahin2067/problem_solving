@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>Decimal To Binary</h2>
+
+    <script>
+      var decimalToBinary = function (nums) {
+        let bin = 0;
+        let i = 1;
+
+        while (nums > 0) {
+          bin = bin + (nums % 2) * i;
+          nums = Math.floor(nums / 2);
+          i *= 10;
+        }
+
+        return bin;
+      };
+
+      let nums = 42;
+      var res = decimalToBinary(nums);
+      document.write(res);
+    </script>
+
+    <!-- OUTPUT: 101010 -->
+  </body>
+</html>
